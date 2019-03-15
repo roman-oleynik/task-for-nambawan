@@ -1,4 +1,23 @@
 $(document).ready(function() {
+    var active = false;
+    $('.menu-button').on('click', function() {
+        if (active === false) {
+            $('.menu-bar').addClass('menu-bar_active');
+            $('.menu-bar').css('transition', '0.5s');
+            $('.menu-button').html('CLOSE');
+            active = true;
+        }
+        else {
+            $('.menu-bar').removeClass('menu-bar_active');
+            $('.menu-bar').css('transition', '0.5s');
+            $('.menu-button').html('<img src="img/menu.png" alt="menu" class="menu-button__img">' +
+            '<span class="menu-button__text">MENU</span>');
+            active = false;
+        }
+        
+    })
+
+
     var left = 0;
     var left2 = 0;
     $('.slider__button_left').on('click', function() {

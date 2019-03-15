@@ -4,10 +4,35 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     .menu-bar {
-        height: 70px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        min-height: 70px;
         width: 100%;
-        flex-direction: row;
+        z-index: 10;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 20px;
+        transition: height 0.4s;
+    }
+    .menu-bar_active {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 10;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+        transition: 0.4s;
     }
     .menu-button__text {
         display: none;
@@ -15,6 +40,7 @@
     .menu-bar__links {
         transform: rotate(0deg);
         margin-bottom: 0;
+        padding-top: 0;
         margin-right: 20px;
     }
     .menu-bar__link {
@@ -120,10 +146,35 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
     .menu-bar {
-        height: 70px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        min-height: 70px;
         width: 100%;
-        flex-direction: row;
+        z-index: 10;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 20px;
+        transition: height 0.4s;
+    }
+    .menu-bar_active {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 10;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+        transition: 0.4s;
     }
     .menu-button__text {
         display: none;
@@ -131,6 +182,7 @@
     .menu-bar__links {
         transform: rotate(0deg);
         margin-bottom: 0;
+        padding-top: 0;
         margin-right: 20px;
     }
     .menu-bar__link {
@@ -146,7 +198,7 @@
         height: 30px;
     }
     .title-block__title {
-        padding: 90px 0 0 10px;
+        padding: 5px 0 0 10px;
     }
     .title-block__subtitle {
         padding: 10px 0 0 10px;
@@ -186,8 +238,8 @@
     }
     .second-block__subtitle {
         padding: 20px 10px 10px 10px;
-        line-height: 26px;
-        font-size: 16px;
+        line-height: 20px;
+        font-size: 14px;
         text-align: center;
         width: 90%;
     }
@@ -236,6 +288,46 @@
   and (max-device-width: 1023px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
+    .menu-bar {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        min-height: 70px;
+        width: 100%;
+        z-index: 10;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        transition: height 0.4s;
+    }
+    .menu-bar_active {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 10;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+        transition: 0.4s;
+    }
+    .menu-button__text {
+        display: none;
+    }
+    .menu-bar__links {
+        transform: rotate(0deg);
+        margin-bottom: 0;
+        padding-top: 0;
+        margin-right: 20px;
+    }
     .title-block__promises {
         display: none;
     }
@@ -662,7 +754,7 @@
         height: 30px;
     }
     .title-block__title {
-        padding: 90px 0 0 10px;
+        padding: 5px 0 0 10px;
     }
     .title-block__subtitle {
         padding: 10px 0 0 10px;
@@ -701,9 +793,9 @@
         text-align: center;
     }
     .second-block__subtitle {
-        padding: 20px 10px 10px 10px;
-        line-height: 26px;
-        font-size: 16px;
+        padding: 0px 10px 10px 10px;
+        line-height: 20px;
+        font-size: 14px;
         text-align: center;
         width: 90%;
     }
