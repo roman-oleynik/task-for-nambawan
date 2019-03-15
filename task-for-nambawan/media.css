@@ -8,11 +8,12 @@
         position: fixed;
         top: 0;
         left: 0px;
-        min-height: 70px;
+        height: 70px;
         width: 100%;
         z-index: 10;
         background: #fff;
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 20px;
@@ -23,7 +24,7 @@
         position: fixed;
         top: 0;
         left: 0px;
-        min-height: 100vh;
+        height: 100vh;
         width: 100vw;
         z-index: 10;
         background: #fff;
@@ -150,11 +151,12 @@
         position: fixed;
         top: 0;
         left: 0px;
-        min-height: 70px;
+        height: 70px;
         width: 100%;
         z-index: 10;
         background: #fff;
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 20px;
@@ -165,7 +167,7 @@
         position: fixed;
         top: 0;
         left: 0px;
-        min-height: 100vh;
+        height: 100vh;
         width: 100vw;
         z-index: 10;
         background: #fff;
@@ -293,11 +295,12 @@
         position: fixed;
         top: 0;
         left: 0px;
-        min-height: 70px;
+        height: 70px;
         width: 100%;
         z-index: 10;
         background: #fff;
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 20px;
@@ -308,7 +311,7 @@
         position: fixed;
         top: 0;
         left: 0px;
-        min-height: 100vh;
+        height: 100vh;
         width: 100vw;
         z-index: 10;
         background: #fff;
@@ -614,10 +617,35 @@
   and (min-width: 320px) 
   and (max-width: 430px) {
     .menu-bar {
-        height: 70px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        min-height: 70px;
         width: 100%;
-        flex-direction: row;
+        z-index: 10;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 20px;
+        transition: height 0.4s;
+    }
+    .menu-bar_active {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 10;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+        transition: 0.4s;
     }
     .menu-button__text {
         display: none;
@@ -625,6 +653,7 @@
     .menu-bar__links {
         transform: rotate(0deg);
         margin-bottom: 0;
+        padding-top: 0;
         margin-right: 20px;
     }
     .menu-bar__link {
@@ -728,10 +757,35 @@
   and (min-width: 431px) 
   and (max-width: 850px) {
     .menu-bar {
-        height: 70px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        min-height: 70px;
         width: 100%;
-        flex-direction: row;
+        z-index: 10;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 20px;
+        transition: height 0.4s;
+    }
+    .menu-bar_active {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 10;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+        transition: 0.4s;
     }
     .menu-button__text {
         display: none;
@@ -739,6 +793,7 @@
     .menu-bar__links {
         transform: rotate(0deg);
         margin-bottom: 0;
+        padding-top: 0;
         margin-right: 20px;
     }
     .menu-bar__link {
@@ -842,6 +897,7 @@
 @media only screen 
   and (min-width: 850px) 
   and (max-width: 1023px) {
+      
     .title-block__promises {
         display: none;
     }
